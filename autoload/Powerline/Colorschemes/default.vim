@@ -37,6 +37,12 @@ call Pl#Hi#Allocate({
 	\ 'gray8'          : 247,
 	\ 'gray9'          : 250,
 	\ 'gray10'         : 252,
+	\
+	\ 'blue'           : 27,
+    \ 'green'          : 155,
+	\ 'orange'         : 9,
+	\ 'lightblue'      : 12,
+	\
 	\ })
 
 let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
@@ -84,8 +90,9 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 		\ 'i': ['brightestred', ['bold']],
 		\ }),
 	\
-	\ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'fileformat', 'fileencoding', 'pwd', 'filetype', 'rvm:string', 'rvm:statusline', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
+	\ Pl#Hi#Segments(['currenttag', 'fullcurrenttag', 'current_function', 'fileformat', 'fileencoding', 'pwd', 'filetype', 'rvm:string', 'rvm:statusline', 'virtualenv:statusline', 'charcode', 'currhigroup', 'tagbar:currenttag'], {
 		\ 'n': ['gray8', 'gray2'],
+		\ 'N': ['darkred'],
 		\ 'i': ['mediumcyan', 'darkestblue'],
 		\ }),
 	\
@@ -163,4 +170,27 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 	\ Pl#Hi#Segments(['ctrlp:SPLIT'], {
 		\ 'n': ['white', 'darkestpurple'],
 		\ }),
+	\
+	\ Pl#Hi#Segments(['unite:static_str.name'], {
+		\ 'n': ['white', 'darkestblue', ['bold']],
+		\ }),
+	\
+	\ Pl#Hi#Segments(['unite:SPLIT'], {
+		\ 'n': ['white', 'darkestblue'],
+		\ }),
+   \ Pl#Hi#Segments(['unite:raw.source'], {
+		\ 'n': ['darkestblue', 'white', ['bold']],
+		\ }),
+   \ Pl#Hi#Segments(['unite:raw.counter'], {
+		\ 'n': ['white', 'lightblue', ['bold']],
+		\ }),
+   \ Pl#Hi#Segments(['unite:static_str.mode'], {
+		\ 'n': ['green', 'lightblue', ['bold']],
+		\ 'i': ['blue', 'lightblue', ['bold']],
+		\ 'v': ['orange', 'lightblue', ['bold']],
+		\ }),
+   \ Pl#Hi#Segments(['unite:status'], {
+		\ 'n': ['darkestblue', 'white', ['bold']],
+		\ }),
+    \
 	\ ])

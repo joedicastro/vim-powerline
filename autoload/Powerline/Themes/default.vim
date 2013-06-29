@@ -112,5 +112,16 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 		\ , ['raw.name', '%{Powerline#Functions#GetShortPath(4)}']
 		\ , Pl#Segment#Truncate()
 		\ , Pl#Segment#Split()
-	\ )
+	\ ),
+	\
+	\ Pl#Theme#Buffer('unite', ['match', 'any', [Pl#Match#Add('&ft', 'unite')]]
+		\ , ['static_str.name', 'Unite']
+		\ , ['raw.source', '%{get(split(unite#get_status_string(),
+            \ "("), 0, "")}']
+		\ , ['raw.counter', '%{get(split(get(split(unite#get_status_string(),
+            \ "("), 1, ""), ")"), 0, "")}']
+		\ , ['static_str.mode', '●']
+		\ , Pl#Segment#Truncate()
+		\ , Pl#Segment#Split()
+	\ ),
 \ )
