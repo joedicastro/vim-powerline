@@ -42,6 +42,8 @@ call Pl#Hi#Allocate({
     \ 'green'          : 155,
 	\ 'orange'         : 9,
 	\ 'lightblue'      : 12,
+	\ 'red'            : 160,
+	\ 'lightred'       : 209,
 	\
 	\ })
 
@@ -178,19 +180,39 @@ let g:Powerline#Colorschemes#default#colorscheme = Pl#Colorscheme#Init([
 	\ Pl#Hi#Segments(['unite:SPLIT'], {
 		\ 'n': ['white', 'darkestblue'],
 		\ }),
-   \ Pl#Hi#Segments(['unite:raw.source'], {
+	\
+    \ Pl#Hi#Segments(['unite:raw.source'], {
 		\ 'n': ['darkestblue', 'white', ['bold']],
 		\ }),
-   \ Pl#Hi#Segments(['unite:raw.counter'], {
+	\
+    \ Pl#Hi#Segments(['unite:raw.counter'], {
 		\ 'n': ['white', 'lightblue', ['bold']],
 		\ }),
-   \ Pl#Hi#Segments(['unite:static_str.mode'], {
+	\
+    \ Pl#Hi#Segments(['unite:static_str.mode'], {
 		\ 'n': ['green', 'lightblue', ['bold']],
 		\ 'i': ['blue', 'lightblue', ['bold']],
 		\ 'v': ['orange', 'lightblue', ['bold']],
 		\ }),
-   \ Pl#Hi#Segments(['unite:status'], {
+	\
+    \ Pl#Hi#Segments(['unite:status'], {
 		\ 'n': ['darkestblue', 'white', ['bold']],
+		\ }),
+	\
+    \ Pl#Hi#Segments(['vimfiler:static_str.name'], {
+		\ 'n': ['white', 'red', ['bold']],
+		\ }),
+	\
+    \ Pl#Hi#Segments(['vimfiler:raw.mode'], {
+		\ 'n': ['white', 'lightred', ['bold']],
+		\ }),
+	\
+    \ Pl#Hi#Segments(['vimfiler:raw.path'], {
+		\ 'n': ['orange', 'white', ['bold']],
+		\ }),
+	\
+    \ Pl#Hi#Segments(['vimfiler:SPLIT'], {
+		\ 'n': ['white', 'red', ['bold']],
 		\ }),
     \
 	\ ])

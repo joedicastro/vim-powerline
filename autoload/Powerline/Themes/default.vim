@@ -124,4 +124,12 @@ let g:Powerline#Themes#default#theme = Pl#Theme#Create(
 		\ , Pl#Segment#Truncate()
 		\ , Pl#Segment#Split()
 	\ ),
+	\
+	\ Pl#Theme#Buffer('vimfiler', ['match', 'any', [Pl#Match#Add('&ft', 'vimfiler')]]
+		\ , ['static_str.name', 'Vimfiler']
+		\ , ['raw.path', '%{get(split(vimfiler#get_status_string(), " "), -1, " ")}']
+		\ , ['raw.mode', '%{get(split(vimfiler#get_status_string(), " "), -2, " ")}']
+		\ , Pl#Segment#Truncate()
+		\ , Pl#Segment#Split()
+	\ ),
 \ )
